@@ -63,19 +63,6 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   plugins = {
-    ["neo-tree"] = {
-      filesystem = {
-        filtered_items = {
-          hide_dotfiles = false,
-          hide_gitignored = false,
-          hide_by_name = {
-            ".DS_Store",
-            "__pycache__",
-            "node_modules",
-          }
-        }
-      }
-    }
   },
   polish = function()
     -- Set up custom filetypes
