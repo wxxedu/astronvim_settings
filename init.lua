@@ -64,7 +64,17 @@ return {
   -- anything that doesn't fit in the normal config locations above can go here
   plugins = {
     ["neo-tree"] = {
-      hide_dotfiles = false,
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_by_name = {
+            ".DS_Store",
+            "__pycache__",
+            "node_modules",
+          }
+        }
+      }
     }
   },
   polish = function()
