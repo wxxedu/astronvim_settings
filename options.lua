@@ -37,5 +37,8 @@ return function(local_vim)
   local_vim.g.icons_enabled = true
   local_vim.g.ui_notifications_enabled = true
   local_vim.g.mapleader = " "
+  local_vim.g.copilot_no_tab_map = true
+  local_vim.g.copilot_assume_mapped = true
+  local_vim.g.copilot_tab_fallback = ""
   return local_vim
 end

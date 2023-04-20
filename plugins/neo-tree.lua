@@ -8,7 +8,9 @@ return {
         hide_dotfiles = false,
         never_show = {
           ".git",
-          ".DS_Store"
+          ".DS_Store",
+          "__pycache__",
+          "node_modules",
         },
       },
     }
