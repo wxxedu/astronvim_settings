@@ -49,6 +49,7 @@ return function(local_vim)
   vim.g.vimtex_compiler_latexmk = {
     build_dir = "build",
     options = {
+      '-xelatex',
       '-shell-escape',
       '-interaction=nonstopmode',
       '-synctex=1',
