@@ -4,5 +4,14 @@ return {
   },
   {
     'thosakwe/vim-flutter'
+  },
+  {
+    'akinsho/flutter-tools.nvim',
+  },
+  {
+    'natebosch/vim-lsc',
+  },
+  {
+    'natebosch/vim-lsc-dart'
   }
 }
