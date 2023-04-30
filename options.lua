@@ -42,13 +42,13 @@ return function(local_vim)
   local_vim.g.copilot_tab_fallback = ""
 
   local_vim.g.tex_flavor = "latex"
-  vim.g.tex_flavor = "latex"
-  vim.g.vimtex_view_sync = 1
-  vim.g.vimtex_view_skim_activate = 1
+  local_vim.g.tex_flavor = "latex"
+  local_vim.g.vimtex_view_sync = 1
+  local_vim.g.vimtex_view_skim_activate = 1
   -- open with skim
-  vim.g.vimtex_view_method = 'skim'
+  local_vim.g.vimtex_view_method = 'skim'
   -- add shell escape to latexmk
-  vim.g.vimtex_compiler_latexmk = {
+  local_vim.g.vimtex_compiler_latexmk = {
     build_dir = "build",
     options = {
       '-xelatex',
