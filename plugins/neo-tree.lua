@@ -1,6 +1,14 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
+    source_selector = {
+      winbar = true,
+      content_layout = "center",
+      tab_labels = {
+        filesystem = "File",
+        git_status = "Git",
+      },
+    },
     filesystem = {
       filtered_items = {
         visible = true,
@@ -15,4 +23,5 @@ return {
       },
     }
   }
+
 }

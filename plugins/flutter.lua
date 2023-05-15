@@ -5,7 +5,4 @@ return {
   {
     'thosakwe/vim-flutter'
   },
-  {
-    'akinsho/flutter-tools.nvim',
-  },
 }
