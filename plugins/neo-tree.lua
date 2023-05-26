@@ -6,7 +6,7 @@ return {
       content_layout = "center",
       tab_labels = {
         filesystem = "File",
-        git_status = "Git",
+        -- git_status = "Git",
       },
     },
     filesystem = {

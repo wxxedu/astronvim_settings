@@ -46,9 +46,11 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- dart
-      'dartls',
     },
+    setup_handlers = {
+      -- add custom handler
+      tsserver = function(_, opts) require("typescript").setup { server = opts } end
+    }
   },
   -- Configure require("lazy").setup() options
   lazy = {
