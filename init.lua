@@ -46,10 +46,24 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
+      "dartls",
+    },
+    config = {
+      dartls = {
+        -- any changes you want to make to the LSP setup, for example
+        color = {
+          enabled = true,
+        },
+        settings = {
+          showTodos = true,
+          completeFunctionCalls = true,
+        },
+      },
     },
     setup_handlers = {
       -- add custom handler
-      tsserver = function(_, opts) require("typescript").setup { server = opts } end
+      tsserver = function(_, opts) require("typescript").setup { server = opts } end,
+      dartls = function(_, opts) require("flutter-tools").setup { lsp = opts } end,
     }
   },
   -- Configure require("lazy").setup() options
@@ -66,13 +80,7 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   plugins = {
-    {
-      "L3MON4D3/LuaSnip",
-      config = function(plugin, opts)
-        require "plugins.configs.luasnip" (plugin, opts)                                       -- include the default astronvim config that calls the setup call
-        require("luasnip.loaders.from_vscode").lazy_load { paths = { "./lua/user/snippets" } } -- load snippets paths
-      end,
-    },
+    
   },
   polish = function()
     -- Set up custom filetypes
