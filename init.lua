@@ -63,7 +63,25 @@ return {
     setup_handlers = {
       -- add custom handler
       tsserver = function(_, opts) require("typescript").setup { server = opts } end,
-      dartls = function(_, opts) require("flutter-tools").setup { lsp = opts } end,
+      dartls = function(_, opts)
+        require("flutter-tools").setup {
+          lsp = opts,
+          dev_log = {
+            enabled = false,
+            notify_errors = false, -- if there is an error whilst running then notify the user
+          },
+          dev_tools = {
+            autostart = true,         -- autostart devtools server if not detected
+            auto_open_browser = true, -- Automatically opens devtools in the browser
+          },
+          outline = {
+            auto_open = true -- if true this will open the outline automatically when it is first populated
+          },
+          widget_guides = {
+            enabled = true,
+          },
+        }
+      end,
     }
   },
   -- Configure require("lazy").setup() options
@@ -80,7 +98,7 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   plugins = {
-    
+
   },
   polish = function()
     -- Set up custom filetypes

@@ -23,7 +23,9 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>ll"] = { ":VimtexCompile<cr>" }
+    ["<leader>ll"] = { ":VimtexCompile<cr>" },
+    ["<leader>fl"] = { ":FlutterRun<cr>" },
+    ["<leader>fr"] = { ":FlutterRestart<cr>" },
   },
   t = {
     -- setting a mapping to false will disable it
