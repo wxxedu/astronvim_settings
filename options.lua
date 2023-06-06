@@ -31,6 +31,9 @@ return function(local_vim)
   local_vim.opt.shortmess = vim.opt.shortmess + { I = true } -- add to option list
   local_vim.opt.cc = '80,120'
 
+  -- set the directory for swap files to be in the same directory as the file
+  local_vim.opt.directory = '.swp/';
+
   local_vim.g.autopairs_enabled = true
   local_vim.g.autoformat_enabled = true
   local_vim.g.diagnostics_mode = 3

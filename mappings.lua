@@ -26,6 +26,7 @@ return {
     ["<leader>ll"] = { ":VimtexCompile<cr>" },
     ["<leader>fl"] = { ":FlutterRun<cr>" },
     ["<leader>fr"] = { ":FlutterRestart<cr>" },
+    ["<leader>fq"] = { ":FlutterQuit<cr>" },
   },
   t = {
     -- setting a mapping to false will disable it
