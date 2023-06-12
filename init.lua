@@ -67,7 +67,7 @@ return {
         require("flutter-tools").setup {
           lsp = opts,
           dev_log = {
-            enabled = false,
+            enabled = true,
             notify_errors = false, -- if there is an error whilst running then notify the user
           },
           dev_tools = {
